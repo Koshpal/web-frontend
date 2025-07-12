@@ -9,6 +9,8 @@
   align-items: center;
   gap: 1.5rem;
   z-index: 40;
+  flex-wrap: wrap;
+  padding: 0 1rem;
 }
 
 /* LOGO container */
@@ -22,8 +24,10 @@
 }
 
 .navbar-logo img {
-  height: 100px;
-  width: 250px;
+  height: 80px;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
 }
 
 .navbar-title {
@@ -39,6 +43,8 @@
   border-radius: 9999px;
   padding: 0.5rem 1.25rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* NAV items inside center bubble */
@@ -46,6 +52,8 @@
   display: flex;
   gap: 1.25rem;
   position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-items a {
@@ -55,6 +63,7 @@
   font-weight: 500;
   border-radius: 9999px;
   transition: background-color 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-items a:hover,
@@ -68,16 +77,11 @@
   background: #D8DBEB80;
   backdrop-filter: blur(12px);
   border-radius: 9999px;
-    /* Increased size */
-  padding: 3rem 6rem; /* ↑ made larger */
-  font-size: 20rem;       /* ↑ slightly bigger text */
-
   padding: 0.5rem 1.25rem;
   font-weight: 600;
   text-decoration: none;
   font-size: 0.875rem;
   color: black;
-  background-color: #D8DBEB80;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
@@ -85,4 +89,40 @@
 .navbar-button-container:hover {
   transform: translateY(-2px);
   background-color: #334EAC;
+}
+
+/* ✅ RESPONSIVE DESIGN BELOW */
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navbar-logo {
+    justify-content: center;
+  }
+
+  .navbar-center-wrapper {
+    justify-content: center;
+    padding: 0.75rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-items a {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .navbar-button-container {
+    align-self: center;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
 }
