@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
+
+.smart-finance-section {
+  background: linear-gradient(to bottom, #1e2b98, #c6d7fb);
+  text-align: center;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #333;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.main-heading {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 67px;
+  letter-spacing: -2px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  color: #e0e7ff;
+}
+
+/* Adjusted layout for flexible card heights and wider blue box */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1200px; /* increased max-width */
+  margin: 0 auto;
+  grid-template-areas:
+    "green pink orange"
+    "blue  blue orange";
+}
+
+.box-card {
+  border-radius: 16px;
+  padding: 20px;
+  color: black;
+  text-align: left;
+}
+
+/* Green and Pink smaller cards */
+.green, .pink {
+  height: 220px;
+}
+
+.green {
+  background: #1dd1a1;
+  grid-area: green;
+}
+
+.pink {
+  background: #ff6b81;
+  grid-area: pink;
+}
+.green, .pink, .orange, .blue {
+  height: auto;
+  min-height: 260px;
+}
+
+.box-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: white;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: flex-end; /* vertical align bottom */
+  height: 64px; /* make sure it aligns at bottom */
+  margin-bottom: 30px; /* space below h3 */
+}
+
+.green h4,
+.pink h4,
+.orange h4 {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 38.4px;
+  letter-spacing: -2px;
+  vertical-align: middle;
+  color: black;
+}
+.blue h4{
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 38.4px;
+  letter-spacing: -2px;
+  vertical-align: middle;
+  color: white;
+}
+.green h4,
+.pink h4,
+.orange h4,
+.blue h4 {
+  margin-bottom: 14px; /* space below h4 */
+}
+.green p,
+.pink p,
+.orange p {
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  font-size: 16.4px;
+  line-height: 24px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: black;
+}
+.blue p {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: black;
+}
+
+
+/* Orange card with image */
+.orange {
+  background: #ffa502;
+  display: flex;
+  flex-direction: column;
+  grid-area: orange;
+  border-radius: 16px;
+  overflow: hidden;
+  gap: 10px; /* Space between image and text */
+}
+
+.planner-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.planner-text {
+  padding: 24px; /* More space around the text inside the box */
+  color: black;
+ ; /* Optional subtle background to separate from orange, can remove */
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* Blue Vision Card */
+.blue.vision {
+  grid-column: span 3; /* span all three columns instead of 2 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2954f2;
+  color: white;
+  padding: 40px;
+  flex-wrap: nowrap;
+  grid-area: blue;
+  border-radius: 16px;
+  gap: 30px;
+}
+
+/* Keep image on right side of blue box */
+.blue.vision img.vision-img {
+  order: 2;
+  margin-left: 30px;
+  width: 250px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Blue box text on the left */
+.blue.vision > div:first-child {
+  flex: 1;
+  order: 1;
+}
+.blue.vision h3 {
+  display: inline-block;    /* prevent flex and allow normal inline flow */
+  white-space: nowrap;      /* prevent line break */
+  overflow: hidden;         /* hide overflow */
+  text-overflow: ellipsis;  /* add ... if text is too long */
+  height: auto !important;  /* override fixed height */
+  line-height: normal !important; /* override small line-height */
+  margin-bottom: 20px;      /* keep some space below */
+  font-size: 64px;          /* keep same font size */
+  color: white;             /* ensure text color */
+}
+
+
+
+
+
+
+/* Strong 3D card hover effect */
+.box-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  perspective: 1200px;
+}
+
+.box-card:hover {
+  transform: rotateX(10deg) rotateY(-10deg) scale(1.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Strong 3D hover effect ONLY on planner1.png */
+.planner-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.planner-img:hover {
+  transform: rotateX(8deg) rotateY(-8deg) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* No 3D effect on planer2.png */
+.vision-img {
+  transition: none;
+  transform: none !important;
+  box-shadow: none !important;
+}

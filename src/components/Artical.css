@@ -1,0 +1,72 @@
+.headline {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #111;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.artical-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.artical {
+  background: white;
+  width: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.artical:hover {
+  transform: translateY(-5px);
+}
+
+.artical-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.artical-content {
+  padding: 20px;
+}
+
+.badge {
+  background-color: #f2f2f2;
+  color: #555;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.artical-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.read-more {
+  border: 2px solid #3d57c2;
+  background: white;
+  color: #3d57c2;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #3d57c2;
+  color: white;
+}

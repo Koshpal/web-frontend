@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@700&family=Outfit:wght@600&display=swap');
+
+.clarity-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.clarity-section h1 {
+  font-size: 42px;
+  color: #1A1A1A;
+  font-weight: 700;
+}
+
+/* Heading (h1) with Figtree font and requested styles */
+.clarity-section h1 {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 65px;
+  line-height: 67px;
+  letter-spacing: 0px;
+  text-align: center;         /* Horizontal alignment */
+  vertical-align: middle;     /* Vertical alignment */
+  color: #1A1A1A;
+}
+
+/* Subtitle paragraph with Outfit font and requested styles */
+.subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: center;         /* Horizontal alignment */
+  vertical-align: middle;     /* Vertical alignment */
+  color: #666;
+  margin-top: 8px;
+  margin-bottom: 60px;
+}
+
+
+.clarity-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;  /* prevents wrapping */
+  align-items: stretch;  /* make columns equal height */
+  gap: 30px;
+}
+
+
+.left-column,
+.right-column,
+.center-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+}
+
+
+.center-column {
+  flex: 1.5;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Makes .center-card take full height */
+}
+
+
+.card {
+  background-color: #2B4DC6;
+  border-radius: 24px;
+  padding: 24px;
+  text-align: left;
+  color: #fff;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.card img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 16px;
+}
+
+.card h3,
+.center-card h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25.99px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;  /* Ensures case is uppercase */
+  vertical-align: middle;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #E2E8F0;
+}
+
+
+
+
+
+
+.center-card p {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #E2E8F0;
+}
+
+.center-card {
+  background-color: #2B4DC6;
+  border-radius: 32px;
+  padding: 64px;
+  text-align: center;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.center-card img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: -65px;       /* ✨ Ensure no margin below */
+  margin-top: auto;       /* ✨ Push image to bottom */
+}
+
+
+.notify {
+  color: #E2E8F0;
+  font-size: 14px;
+}
+
+
+
+/* === GLOWING BORDER EFFECT ON HOVER === 
+
+.card,
+.center-card {
+  position: relative;
+  z-index: 0;
+  border: 2px solid transparent;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.card::before,
+.center-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 5px; /* controls border thickness */
+ /* background: linear-gradient(145deg, #8f5fe8, #ff81d9, #ffe165);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(3px); /* soft glow */
+/*}
+
+.card:hover::before,
+.center-card:hover::before {
+  opacity: 1;
+}
+
+.card:hover,
+.center-card:hover {
+  transform: translateY(-2px);
+  border-color: transparent;} /* ensure no clashing border */

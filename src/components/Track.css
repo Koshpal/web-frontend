@@ -1,0 +1,40 @@
+.track-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.track-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.track-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Button placed visually where the image's own button is */
+.track-button {
+  position: absolute;
+  bottom: 40px;  /* adjust as needed */
+  right: 40px;   /* adjust as needed */
+  background: white;
+  color: black;
+  padding: 20px 44px;  /* Increased size */
+  font-size: 1.1rem;   /* Slightly larger text */
+  border-radius: 35px; /* Slightly rounder */
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.track-button:hover {
+  background: #3b5fff;
+  color: white;
+}

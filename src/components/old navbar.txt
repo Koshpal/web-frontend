@@ -1,0 +1,156 @@
+js code
+
+
+// src/components/Navbar.js
+import React from "react";
+import "./Navbar.css";
+
+function Navbar() {
+  return (
+    <header className="navbar">
+      <div className="navbar-left">
+        <div className="logo">
+          <img src="logo.png" alt="Koshpal Logo" />
+        </div>
+        <div className="brand-name">Koshpal</div>
+      </div>
+
+      <div className="navbar-center">
+        <nav className="nav-links-group">
+          <a href="#" className="nav-btn active">Home</a>
+          <a href="#" className="nav-btn">Services</a>
+          <a href="#" className="nav-btn">Portfolio</a>
+        </nav>
+      </div>
+
+      <div className="navbar-right">
+        <div className="work-btn-group">
+          <button className="nav-btn work-btn">Work With Us</button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default Navbar;
+
+
+
+
+css code
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Instrument Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar container */
+.navbar {
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 805px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 12px;
+  z-index: 1000;
+
+  background-color: transparent;
+  /* Removed blur */
+  /* backdrop-filter: blur(10px); */ 
+}
+
+/* Lift on hover */
+.navbar:hover {
+  transform: translate(-50%, -4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Left side: logo + brand name */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo img {
+  height: 32px;
+}
+
+.brand-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Center nav links in grouped border */
+.navbar-center {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-group {
+  display: flex;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: 2px solid #E2E2E280;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Right side: work button */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Right side: work button group with border */
+.work-btn-group {
+  display: flex;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  border: 2px solid #E2E2E280;
+  background-color: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Shared button styles */
+.nav-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: none;
+}
+
+.nav-btn:hover {
+  color: white;
+  background-color: #334EAC;
+  transform: translateY(-2px);
+}
+
+.nav-btn.active {
+  background-color: none;
+  font-weight: 700;
+}
