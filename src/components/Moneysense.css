@@ -158,3 +158,97 @@
 .notify-btn {
   animation: pulse 2.5s infinite;
 }
+
+/* ✅ RESPONSIVE FIXES */
+
+@media (max-width: 1024px) {
+  .money-sense {
+    padding: 60px 40px;
+    gap: 60px;
+  }
+
+  .left {
+    margin-left: 60px;
+    max-width: 100%;
+  }
+
+  .money-sense h1 {
+    font-size: 36px;
+  }
+
+  .money-sense p {
+    font-size: 16px;
+  }
+
+  .Juggling {
+    width: 180px;
+    margin-left: 0;
+  }
+
+  .phone-ui {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .money-sense {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .left {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .money-sense h1 {
+    font-size: 28px;
+  }
+
+  .money-sense p {
+    font-size: 15px;
+  }
+
+  .Juggling {
+    width: 160px;
+    margin-bottom: 24px;
+  }
+
+  .notify-btn {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+
+  .right {
+    justify-content: center;
+  }
+
+  .phone-ui {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .money-sense h1 {
+    font-size: 24px;
+  }
+
+  .money-sense p {
+    font-size: 14px;
+  }
+
+  .notify-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .Juggling {
+    width: 140px;
+  }
+
+  .phone-ui {
+    max-width: 200px;
+  }
+}
