@@ -11,3 +11,35 @@
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
+
+
+@media (max-width: 1024px) {
+  .money {
+    padding: 30px 16px;
+  }
+
+  .money img {
+    border-radius: 16px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .money img {
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .money {
+    padding: 20px 12px;
+  }
+
+  .money img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+}
