@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './Statistics.css';
+import img1 from './assets/Statistics1.png';
+import img2 from './assets/Statistics2.png';
+import img3 from './assets/Statistics3.png';
+
 
 const Statistics = () => {
   const [scrollDir, setScrollDir] = useState('down');
@@ -24,7 +28,7 @@ const Statistics = () => {
       paragraph:
         'Your dashboard updates daily with a completed billable time report. We use AI to match your work to relevant client matters, harmonize multi-tasking activity and generate narrative descriptions.',
       linkText: 'Request a demo →',
-      imageSrc: 'Statistics1.png',
+      imageSrc: 'img1.png',
       imageAlt: 'Income & Expenses',
       reverse: false,
     },
@@ -35,7 +39,7 @@ const Statistics = () => {
       paragraph:
         'The more you use Billables AI, the better it works for you. Over time, your dashboard will evolve to help you bill the way you (and your clients) prefer.',
       linkText: 'Get yours →',
-      imageSrc: 'Statistics2.png',
+      imageSrc: 'img2.png',
       imageAlt: 'Billing Block',
       reverse: true,
     },
@@ -46,7 +50,7 @@ const Statistics = () => {
       paragraph:
         'With Billables AI, the only person who can see and manage your time reports is you. You can edit or delete any of your billable records before they are exported or shared with others.',
       linkText: 'See it in action →',
-      imageSrc: 'Statistics3.png',
+      imageSrc: 'img3.png',
       imageAlt: 'Assign Unbilled Time',
       reverse: false,
     },
