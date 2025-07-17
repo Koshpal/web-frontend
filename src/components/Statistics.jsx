@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './Statistics.css';
-import img1 from './assets/Statistics1.png';
-import img2 from './assets/Statistics2.png';
-import img3 from './assets/Statistics3.png';
+import img1 from '../assets/Statistics1.png';
+import img2 from '../assets/Statistics2.png';
+import img3 from '../assets/Statistics3.png';
 
 
 const Statistics = () => {
