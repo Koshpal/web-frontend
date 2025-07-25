@@ -28,7 +28,7 @@ const Statistics = () => {
       paragraph:
         'Your dashboard updates daily with a completed billable time report. We use AI to match your work to relevant client matters, harmonize multi-tasking activity and generate narrative descriptions.',
       linkText: 'Request a demo →',
-      imageSrc: 'img1.png',
+      imageSrc: 'Statistics1.png',
       imageAlt: 'Income & Expenses',
       reverse: false,
     },
@@ -39,7 +39,7 @@ const Statistics = () => {
       paragraph:
         'The more you use Billables AI, the better it works for you. Over time, your dashboard will evolve to help you bill the way you (and your clients) prefer.',
       linkText: 'Get yours →',
-      imageSrc: 'img2.png',
+      imageSrc: 'Statistics2.png',
       imageAlt: 'Billing Block',
       reverse: true,
     },
@@ -50,7 +50,7 @@ const Statistics = () => {
       paragraph:
         'With Billables AI, the only person who can see and manage your time reports is you. You can edit or delete any of your billable records before they are exported or shared with others.',
       linkText: 'See it in action →',
-      imageSrc: 'img3.png',
+      imageSrc: 'Statistics3.png',
       imageAlt: 'Assign Unbilled Time',
       reverse: false,
     },
