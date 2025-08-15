@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 60px 80px;
+  align-items: stretch; /* ✅ This stretches both sides equally */
+}
+
+
+
+.faq-section,
+.answer-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.faq-section h2,
+.answer-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background-color: white;
+  color: black;
+  padding: 16px 20px;
+  border-radius: 6px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.faq-item:hover {
+  background-color: #052460; /* dark green on hover */
+  color: white;
+}
+
+.faq-item.active {
+  background-color: #052460; /* dark blue for selected */
+  color: white;
+}
+
+.answer-box {
+  flex: 1;
+  background-color: #3d57c2;
+  border-radius: 16px;
+  padding: 40px 32px 32px 32px;
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0;
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start; /* ✅ aligns content to the top */
+}
+  
+
+
+
+/* Make answer section hidden by default */
+.answer-box.hidden {
+  display: none;
+}
+
+/* Show answer box when not hidden (class is removed by JS) */
+.answer-box {
+  display: flex;
+}
+
+.answer-box .icon {
+  width: 22px;
+  height: 22px;
+  margin-top: 4px;
+}

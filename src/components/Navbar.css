@@ -1,0 +1,122 @@
+/* Navbar wrapper holding 3 separate components */
+.navbar-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 40;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+/* LOGO container */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.navbar-logo img {
+  height: 80px;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* CENTER nav container */
+.navbar-center-wrapper {
+  display: flex;
+  background: #D8DBEB80;
+  backdrop-filter: blur(12px);
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* NAV items inside center bubble */
+.nav-items {
+  display: flex;
+  gap: 1.25rem;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-items a {
+  padding: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-items a:hover,
+.nav-items a.active {
+  color: white;
+  background-color: #334EAC;
+}
+
+/* CTA BUTTON container */
+.navbar-button-container {
+  background: #D8DBEB80;
+  backdrop-filter: blur(12px);
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: black;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.navbar-button-container:hover {
+  transform: translateY(-2px);
+  background-color: #334EAC;
+}
+
+/* ✅ RESPONSIVE DESIGN BELOW */
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navbar-logo {
+    justify-content: center;
+  }
+
+  /* 🔹 Make logo bigger on mobile */
+  .navbar-logo img {
+    width: 350px;
+    height: auto;
+  }
+
+  /* 🔹 Hide center nav on mobile */
+  .navbar-center-wrapper {
+    display: none !important;
+  }
+
+  /* 🔹 Hide right Contact Us button on mobile */
+  .navbar-button-container {
+    display: none !important;
+  }
+}

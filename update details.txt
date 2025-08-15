@@ -1,0 +1,10 @@
+1. background of hero section
+2. font- check the font from figma file
+3. hero section in full page.
+4. photo at section 2
+5. ios phone photo at the end of the box
+
+
+1. navbar background color
+
+

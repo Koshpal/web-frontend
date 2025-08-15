@@ -1,0 +1,32 @@
+.article-container {
+  position: relative;
+  cursor: none;
+}
+
+.pointer-wrapper {
+  position: absolute;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.pointer-icon {
+  width: 24px;
+  height: 24px;
+  transform: translate(-12px, -10px) rotate(-70deg);
+  stroke: #0ea5e9;
+  fill: #0ea5e9;
+}
+
+.pointer-label {
+  margin-top: 4px;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+/* Add any extra styling for the pointer here if needed */
+
+.article-wrapper {
+  position: relative;
+}
