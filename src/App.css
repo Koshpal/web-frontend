@@ -1,20 +1,30 @@
+/* ✅ Import font */
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
-/* ✅ Global mobile-friendly settings */
+/* ============================= */
+/* 1) Global Reset + Safe Defaults */
+/* ============================= */
 html, body {
-  overflow-x: hidden;   /* Prevent horizontal scrolling */
+  overflow-x: hidden;   /* Prevent horizontal scroll */
   max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box; /* Consistent width/height */
 }
 
 img, video {
   max-width: 100%;
   height: auto;         /* Keep aspect ratio */
+  display: block;
 }
 
-* {
-  box-sizing: border-box; /* Makes widths work consistently */
-}
-
+/* ============================= */
+/* 2) Desktop Base Styles (default) */
+/* ============================= */
 .App {
   text-align: center;
 }
@@ -22,12 +32,6 @@ img, video {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -45,11 +49,39 @@ img, video {
   color: #61dafb;
 }
 
+/* ============================= */
+/* 3) Animations */
+/* ============================= */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* ============================= */
+/* 4) Mobile Overrides (ALWAYS LAST) */
+/* ============================= */
+@media (max-width: 768px) {
+  .App-header {
+    min-height: auto;           /* Let height adapt naturally */
+    padding: 20px;
+    font-size: 16px;            /* Smaller font for mobile */
+  }
+
+  .App-logo {
+    height: 30vmin;             /* Reduce logo size */
+  }
+
+  .App {
+    text-align: left;           /* Mobile looks better left aligned */
   }
 }
